@@ -2,7 +2,7 @@
 * @Author: hasee
 * @Date:   2017-11-20 16:51:18
 * @Last Modified by:   hasee
-* @Last Modified time: 2017-11-20 16:57:52
+* @Last Modified time: 2017-11-20 17:29:37
 */
 
 
@@ -11,11 +11,11 @@
 
 #include <stdio.h>
 #include <lcd.h>
-void main(int argc, char const *argv[])
+int lcd_rgb(unsigned int _argb)
 {
 	lcd_rgb(unsigned int _argb)
 	{
-
+		//打开设备文件，
 		int lcd_fb=open("/dev/fb0",O_RDWR);
 	
 		if (-1==lcd_fb)
