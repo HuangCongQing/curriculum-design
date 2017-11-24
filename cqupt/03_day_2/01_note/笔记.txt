@@ -1,0 +1,11 @@
+       #include <sys/types.h>
+       #include <unistd.h>
+
+off_t lseek(int fd, off_t offset, int whence);
+fd：文件描述符
+offset：偏移量
+whence： SEEK_SET 从文件头开始偏移
+   
+         SEEK_CUR 从当前位置开始偏移
+
+	SEEK_END 从文件末尾开始偏移。

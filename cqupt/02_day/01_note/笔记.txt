@@ -1,0 +1,54 @@
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+int open(const char *pathname, int flags);
+
+pathname：要打开的文件的路径。
+flags： O_RDONLY, O_WRONLY, or O_RDWR.
+返回值：成功返回文件描述符，失败返回-1
+
+
+write：
+
+#include <unistd.h>
+ssize_t write(int fd, const void *buf, size_t count);
+fd:文件描述符，open之后得到的
+buf:写入的内容来源。指针。
+count：写入多大的数据。（字节）
+
+
+
+
+
+> 5种颜色（非R,G,B）每隔一秒循环切换
+> 提示：延时函数：sleep()，函数查看：man
+
+
+#include <sys/mman.h>
+
+void *mmap(void *addr, size_t length, int prot, int flags,int fd, off_t offset);
+
+addr:NULL,内核自动分配一段内存
+length:长度
+prot:  PROT_EXEC
+       PROT_READ  
+       PROT_WRITE  
+	PROT_NONE 
+flags: MAP_SHARED，MAP_PRIVATE。
+fd：文件描述符
+offset：偏移量
+
+返回值： 成功返回地址，失败返回(void *)-1
+
+练习：
+1. 
+       usleep()
+
+
+
+
+
+
+
+
