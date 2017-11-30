@@ -3,12 +3,12 @@
 
 #include <stdio.h>
 #include "lcd.h"
-enum _ui{
+enum _ui{  // 主界面的flag
 	UI_MAIN,
 	UI_DHT
 };
 
-enum _dht_opt{
+enum _dht_opt{  // 跳转界面 操作位
 	DHT_EXIT,
 	DHT_NULL,
 	DHT_PRINT
