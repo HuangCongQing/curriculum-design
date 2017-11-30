@@ -1,0 +1,37 @@
+============================================================
+Time  2017/11/26 04:44:49 362 
+============================================================
+[2017/11/26 04:44:49 362] isr_local  2168 os_type is:  Linux  
+[2017/11/26 04:44:49 362] isr_local  2177 SYS_MSG_LOAD_LOCAL  
+[2017/11/26 04:44:49 362] isr_local  2265 last gc at  1511700155  
+[2017/11/26 04:44:49 363] isr_local  2206 SYS_MSG_REGCB_LOCAL| param0 =  msp_status_cb  
+[2017/11/26 04:44:49 363] isr_local  2265 last gc at  1511700155  
+[2017/11/26 04:44:49 370] isr_local  2206 SYS_MSG_REGCB_LOCAL| param0 =  update_lex_cb  
+[2017/11/26 04:44:49 370] isr_local  2265 last gc at  1511700155  
+[2017/11/26 04:44:49 370] isr_local  2232 ASR_LOCAL_MSG_UPDATE_LEX  
+[2017/11/26 04:44:49 370] isr_local  1860 grm_init | params:  engine_type = local, text_encoding = UTF-8, 		asr_res_path = fo|res/asr/common.jet, sample_rate = 16000, 		grm_build_path = res/asr/GrmBuilld, grammar_list = call,   
+[2017/11/26 04:44:49 370] isr_local  803  engine_type  :  local  
+[2017/11/26 04:44:49 370] isr_local  803  text_encoding  :  UTF-8  
+[2017/11/26 04:44:49 370] isr_local  803  asr_res_path  :  fo|res/asr/common.jet  
+[2017/11/26 04:44:49 370] isr_local  803  sample_rate  :  16000  
+[2017/11/26 04:44:49 370] isr_local  803  grm_build_path  :  res/asr/GrmBuilld  
+[2017/11/26 04:44:49 370] isr_local  803  grammar_list  :  call  
+[2017/11/26 04:44:49 371] isr_local  1000 file count =   1  
+[2017/11/26 04:44:49 371] isr_local  923  file open type is:   fo  
+[2017/11/26 04:44:49 371] isr_local  956  res/asr/common.jet  0  0  
+[2017/11/26 04:44:49 371] isr_local  1018 speech_plus_setting  0  
+[2017/11/26 04:44:49 371] isr_local  1031 2  nil  res/asr/common.jet  0  0  
+[2017/11/26 04:44:49 372] isr_local  1033 res_ver  2  
+[2017/11/26 04:44:49 372] isr_local  1034 res 5  b641a31e5e010605a5109511d66c7491  
+[2017/11/26 04:44:49 372] isr_local  1035 res_new_old_mark  v5pp  
+[2017/11/26 04:44:49 372] isr_local  1036 res_usr_name    
+[2017/11/26 04:44:49 372] isr_local  1037 res_expires  1514723033  
+[2017/11/26 04:44:49 372] isr_local  1038 err  0  
+[2017/11/26 04:44:49 372] isr_local  1054 lgi appid 5  b641a31e5e010605a5109511d66c7491  
+[2017/11/26 04:44:49 372] isr_local  1069 now expires:  1511700289  1514723033  
+[2017/11/26 04:44:49 374] isr_local  2241 update dict  
+[2017/11/26 04:44:49 374] isr_local  1717 contact  call  
+[2017/11/26 04:44:49 376] isr_local  1768 grm_list grm name:   call  
+[2017/11/26 04:44:49 376] isr_local  1601 proc_retcode_grm | errorcode =  0  
+[2017/11/26 04:44:49 400] isr_local  1979 grammar id:call  
+[2017/11/26 04:44:49 401] isr_local  1593 onGrmLocalServiceCb  0  call  

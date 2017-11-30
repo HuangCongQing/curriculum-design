@@ -1,0 +1,37 @@
+struct input_event {
+	struct timeval time;
+	__u16 type;//是不是触摸屏的事件（EV_ABS）
+	__u16 code;//是x轴还是Y轴 或者其他的
+	__s32 value;//值
+};
+
+#define ABS_X			0x00
+#define ABS_Y			0x01
+#define ABS_PRESSURE		0x18
+
+
+       #include <unistd.h>
+
+       ssize_t read(int fd, void *buf, size_t count);
+
+fd:文件描述符，
+buf:存储读出的内容，
+count：读取的大小（字节）
+
+A  R  G  B
+00 00 00 00   
+   aa 00 00  R  AA << 16 =
+      bb 00  G  BB << 8
+	 cc  B  CC << 0
+相或
+aa bb cc
+（unsigned int）
+	
+
+
+
+
+
+
+
+

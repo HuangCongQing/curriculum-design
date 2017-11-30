@@ -1,0 +1,14 @@
+﻿#BNF+IAT 1.0 UTF-8;
+!grammar call;
+!slot <want>;
+!slot <dialpre>;
+!slot <dialsuf>;
+!slot <contact>;
+
+!start <callstart>;
+<callstart>:<dial>;
+
+<dial>:<dialpre><contact>;
+<dialpre>:开!id(10001)|打开!id(10001)|关|关闭;
+
+<contact>:窗帘;
