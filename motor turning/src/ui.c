@@ -20,7 +20,8 @@ int init_flag(){
 int pro_ui_main(){
 	// printf("pro_ui_main：----\n");
 	bmp_800_480("./main.bmp");
-	show_bmp_not_800_480("./02.bmp",400,240);
+	show_bmp_not_800_480("./02.bmp",111,172);
+	show_bmp_not_800_480("./02.bmp",500,172);
 	while(ui_flag ==  UI_MAIN);      // 如果在主界面没有其他操作，就一直循环在主界面
 }
 
@@ -38,7 +39,9 @@ int pro_ui_dht(){
 				continue; // 开始进去之后一直空转
 			}
 			case DHT_PRINT:{
-				printf("DHT_PRINT!\n");
+				// 处理操作
+				printf("DHT_PRINT!不要点我了\n");
+				show_bmp_not_800_480("./02.bmp",111,172);
 				break;
 			}
 			case DHT_EXIT:{

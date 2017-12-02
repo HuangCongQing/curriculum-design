@@ -37,11 +37,11 @@ void * start_routine (void * arg){
 		read_ts(&ts_p);
 		switch(ui_flag){
 			case UI_MAIN:{
-				pro_ts_main(&ts_p);
+				pro_ts_main(&ts_p);// 判断点击位置
 				break;
 			}
 			case UI_DHT:{
-				pro_ts_dht(&ts_p);
+				pro_ts_dht(&ts_p);// 判断点击位置
 				break;
 			}
 
@@ -60,15 +60,14 @@ int main(int argc, char const *argv[])
 	pthread_t thread_ts;
 	pthread_create(&thread_ts, NULL,start_routine,NULL);
 	// printf("%d\n",ui_flag);
-	printf("114444441\n");
 	while(1){
 		switch(ui_flag){
 			case UI_MAIN:{
-				pro_ui_main();
+				pro_ui_main();// 切换图片界面
 				break;
 			}
 			case UI_DHT:{
-				pro_ui_dht();
+				pro_ui_dht();// 切换图片界面
 				break;
 			}
 		}

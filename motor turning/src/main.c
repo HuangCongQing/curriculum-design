@@ -67,10 +67,10 @@ void * start_routine (void * arg){
 }
 
 
-
+// 主函数主函数主函数主函数主函数主函数主函数主函数主函数主函数主函数
 int main(int argc, char const *argv[])
 {
-	init_flag();
+	init_flag();// ui.c
 	pthread_t thread_ts;
 	// 创建主线程
 	pthread_create(&thread_ts, NULL,start_routine,NULL);
@@ -78,11 +78,11 @@ int main(int argc, char const *argv[])
 	while(1){
 		switch(ui_flag){
 			case UI_MAIN:{
-				pro_ui_main();
+				pro_ui_main(); // 去主界面
 				break;
 			}
 			case UI_DHT:{
-				pro_ui_dht();
+				pro_ui_dht(); // 去另一界面
 				break;
 			}
 		}

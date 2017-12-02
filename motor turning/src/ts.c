@@ -1,4 +1,5 @@
 #include "ts.h"
+#include "ui.h"
 
 static struct tsdev * ts_dev = NULL;
 int init_ts(){
@@ -17,8 +18,6 @@ int read_ts(struct ts_sample  *ts_p){
 	printf("111\n");
 	// 读取触摸屏参数 ts_read
 	int ret = ts_read(ts_dev, ts_p,1); // 这里会有一个阻塞
-	printf("tttt\n");
-
 	printf("x=%d,y=%d,p=%d\n", ts_p->x,ts_p->y,ts_p->pressure);
 	return ret;
 }
