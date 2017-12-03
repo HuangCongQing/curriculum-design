@@ -24,6 +24,10 @@ int pro_ts_main(struct ts_sample  *ts_p){
 	if(ts_p->x > 111 && ts_p->x < 282 && ts_p->y > 172 && ts_p->y < 314 && ts_p->pressure >0){
 		ui_flag = UI_DHT;  // 设置flag跳转界面
 	}
+	// 电机跳转反转
+	if(ts_p->x > 500 && ts_p->x < 670 && ts_p->y > 172 && ts_p->y < 314 && ts_p->pressure >0){
+		ui_flag = UI_MOT;  // 设置flag跳转界面
+	}
 
 	return 0;
 
@@ -39,6 +43,19 @@ int pro_ts_dht(struct ts_sample  *ts_p){
 	if (ts_p->x >400 && ts_p->x < 800 && ts_p->y > 240 && ts_p->y < 480 && ts_p->pressure >0)
 	{
 		dht_opt = DHT_PRINT; 
+	}
+}
+
+//反转电机的界面点击操作
+int pro_ts_mot(struct ts_sample  *ts_p){
+
+	if (ts_p->x >0 && ts_p->x < 200 && ts_p->y > 0 && ts_p->y < 100 && ts_p->pressure >0)
+	{
+		ui_flag = UI_MAIN;
+	}
+	if (ts_p->x >400 && ts_p->x < 800 && ts_p->y > 240 && ts_p->y < 480 && ts_p->pressure >0)
+	{
+		mot_opt = MOT_PRINT; 
 	}
 }
 
@@ -58,6 +75,10 @@ void * start_routine (void * arg){
 				pro_ts_dht(&ts_p);
 				break;
 			}
+			case UI_MOT:{
+				pro_ts_mot(&ts_p);
+				break;
+			}
 
 		}
 	}
@@ -72,9 +93,9 @@ int main(int argc, char const *argv[])
 {
 	init_flag();// ui.c
 	pthread_t thread_ts;
-	// 创建主线程
+	// 两个线程
 	pthread_create(&thread_ts, NULL,start_routine,NULL);
-	
+	// 下面主要是跳转界面
 	while(1){
 		switch(ui_flag){
 			case UI_MAIN:{
@@ -83,6 +104,10 @@ int main(int argc, char const *argv[])
 			}
 			case UI_DHT:{
 				pro_ui_dht(); // 去另一界面
+				break;
+			}
+			case UI_MOT:{
+				pro_ui_mot(); // 去另一界面
 				break;
 			}
 		}

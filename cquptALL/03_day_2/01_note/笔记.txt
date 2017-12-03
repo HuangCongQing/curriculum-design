@@ -2,30 +2,30 @@
        #include <unistd.h>
 
 off_t lseek(int fd, off_t offset, int whence);
-fd���ļ�������
-offset��ƫ����
-whence�� SEEK_SET ���ļ�ͷ��ʼƫ��
+fd：文件描述符
+offset：偏移量
+whence： SEEK_SET 从文件头开始偏移
    
-         SEEK_CUR �ӵ�ǰλ�ÿ�ʼƫ��
+         SEEK_CUR 从当前位置开始偏移
 
-	SEEK_END ���ļ�ĩβ��ʼƫ�ơ�
+	SEEK_END 从文件末尾开始偏移。
 
 
 cd /etc/
 vi profile
-��һ����д��G��(shift+g)  ---��ת���ļ���ĩβ
-�ƶ���굽��Ҫɾ������
-������d��   ---=ɾ����ǰ��
+打一个大写的G。(shift+g)  ---跳转到文件的末尾
+移动光标到需要删除的行
+按两下d键   ---=删除当前行
 
-��һ��esc
-����":wq"���س��� ---����
+按一下esc
+输入":wq"，回车。 ---保存
  
 
 struct input_event {
 	struct timeval time;
-	__u16 type; //��ʾ��ʲô��ʱ�䷢���ˣ�EV_ABS��
-	__u16 code;//����
-	__s32 value;//ֵ
+	__u16 type; //表示是什么的时间发生了（EV_ABS）
+	__u16 code;//坐标
+	__s32 value;//值
 };
 
 #define ABS_X			0x00

@@ -54,9 +54,9 @@ int main(int argc, char const *argv[])
 
 
     while(1){
-
-       write(serial_fd, "cqupt", 6);
-       sleep(1);
+		print("asdf");
+		write(serial_fd, "cqupt", 6);
+		sleep(1);
     }
 
     tcsetattr(serial_fd,TCSANOW,&termios_old);
