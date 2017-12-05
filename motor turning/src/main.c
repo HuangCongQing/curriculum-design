@@ -16,6 +16,7 @@
 #include <pthread.h>
 #include <unistd.h>
 #include "ui.h"
+#include "zigbee.h"
 
 // 处理主界面的触摸坐标
 int pro_ts_main(struct ts_sample  *ts_p){

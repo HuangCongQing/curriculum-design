@@ -1,4 +1,5 @@
 #include "ui.h"
+#include "zigbee.h"
 
 enum _ui ui_flag;
 enum _dht_opt dht_opt;
@@ -44,6 +45,7 @@ int pro_ui_dht(){
 				// 处理操作
 				printf("DHT_PRINT!--------------\n");
 				show_bmp_not_800_480("./02.bmp",111,172);
+				send_msg("21" , 2);
 
 				break;
 			}
