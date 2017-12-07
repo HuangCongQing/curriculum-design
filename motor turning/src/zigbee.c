@@ -2,9 +2,9 @@
 
 char tem_buf[20];
 
-int send_msg(char *cmd_buf, int num)
+int send_msg(char *cmd_buf)
 {
-
+    printf("2222");
     //1. 打开串口设备
     int serial_fd = open("/dev/s3c2410_serial3",O_RDWR);
     if(serial_fd == -1){
@@ -42,8 +42,11 @@ int send_msg(char *cmd_buf, int num)
     tcflush(serial_fd,TCIOFLUSH);
 
     tcsetattr(serial_fd,TCSANOW,&termios_current);
+    
+        printf("adsf");
+        write(serial_fd, cmd_buf, 1);
 
-    write(serial_fd, cmd_buf, num);
+    // write(serial_fd, cmd_buf, 6);
 
     tcsetattr(serial_fd,TCSANOW,&termios_old);
     close(serial_fd);

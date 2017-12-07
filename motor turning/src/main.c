@@ -16,7 +16,7 @@
 #include <pthread.h>
 #include <unistd.h>
 #include "ui.h"
-#include "zigbee.h"
+// #include "zigbee.h"
 
 // 处理主界面的触摸坐标
 int pro_ts_main(struct ts_sample  *ts_p){
@@ -26,7 +26,7 @@ int pro_ts_main(struct ts_sample  *ts_p){
 		ui_flag = UI_DHT;  // 设置flag跳转界面
 	}
 	// 电机跳转反转
-	if(ts_p->x > 500 && ts_p->x < 670 && ts_p->y > 172 && ts_p->y < 314 && ts_p->pressure >0){
+	if(ts_p->x > 500 && ts_p->x < 770 && ts_p->y > 172 && ts_p->y < 314 && ts_p->pressure >0){
 		ui_flag = UI_MOT;  // 设置flag跳转界面
 	}
 

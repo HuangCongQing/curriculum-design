@@ -22,9 +22,9 @@ int init_flag(){
 
 int pro_ui_main(){
 	// printf("pro_ui_main：----\n");
-	bmp_800_480("./curtain.bmp");
-	show_bmp_not_800_480("./open.bmp",111,172);
-	show_bmp_not_800_480("./close.bmp",500,172);
+	bmp_800_480("./curtain2.bmp");
+	// show_bmp_not_800_480("./open.bmp",111,172);
+	// show_bmp_not_800_480("./close.bmp",500,172);
 	while(ui_flag ==  UI_MAIN);      // 如果在主界面没有其他操作，就一直循环在主界面
 }
 
@@ -35,7 +35,10 @@ int pro_ui_main(){
  **************/
 int pro_ui_dht(){
 	// printf("pro_ui_dht:----\n");
-	bmp_800_480("./dht.bmp");
+	bmp_800_480("./sky.bmp");
+	show_bmp_not_800_480("./0.bmp",300,172);
+	show_bmp_not_800_480("./1.bmp",350,172);
+	show_bmp_not_800_480("./2.bmp",400,172);
 	while(ui_flag ==  UI_DHT){
 		switch(dht_opt){
 			case DHT_NULL:{
@@ -45,8 +48,9 @@ int pro_ui_dht(){
 				// 处理操作
 				printf("DHT_PRINT!--------------\n");
 				show_bmp_not_800_480("./02.bmp",111,172);
-				send_msg("21" , 2);
-
+				char num[1] = "1";
+				send_msg(num);
+				printf("333\n");
 				break;
 			}
 			case DHT_EXIT:{
@@ -64,7 +68,7 @@ int pro_ui_dht(){
  **************/
 int pro_ui_mot(){
 	// printf("pro_ui_mot:----\n");
-	bmp_800_480("./dht.bmp");
+	bmp_800_480("./sky1.bmp");
 	while(ui_flag ==  UI_MOT){
 		switch(mot_opt){
 			case MOT_NULL:{
