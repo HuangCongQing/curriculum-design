@@ -111,12 +111,12 @@ int expect_speed(int x){
 			exp_quan=7;
 			break;
 		}
-		case 9:{
+		case 8:{
 			exp_speed=2880;
 			exp_quan=8;
 			break;
 		}
-		case 8:{
+		case 9:{
 			exp_speed=3240;
 			exp_quan=9;
 			break;
