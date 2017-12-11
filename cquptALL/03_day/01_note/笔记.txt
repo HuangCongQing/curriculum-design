@@ -1,8 +1,8 @@
 struct input_event {
 	struct timeval time;
-	__u16 type;//ÊÇ²»ÊÇ´¥ÃşÆÁµÄÊÂ¼ş£¨EV_ABS£©
-	__u16 code;//ÊÇxÖá»¹ÊÇYÖá »òÕßÆäËûµÄ
-	__s32 value;//Öµ
+	__u16 type;//æ˜¯ä¸æ˜¯è§¦æ‘¸å±çš„äº‹ä»¶ï¼ˆEV_ABSï¼‰
+	__u16 code;//æ˜¯xè½´è¿˜æ˜¯Yè½´ æˆ–è€…å…¶ä»–çš„
+	__s32 value;//å€¼
 };
 
 #define ABS_X			0x00
@@ -14,18 +14,18 @@ struct input_event {
 
        ssize_t read(int fd, void *buf, size_t count);
 
-fd:ÎÄ¼şÃèÊö·û£¬
-buf:´æ´¢¶Á³öµÄÄÚÈİ£¬
-count£º¶ÁÈ¡µÄ´óĞ¡£¨×Ö½Ú£©
+fd:æ–‡ä»¶æè¿°ç¬¦ï¼Œ
+buf:å­˜å‚¨è¯»å‡ºçš„å†…å®¹ï¼Œ
+countï¼šè¯»å–çš„å¤§å°ï¼ˆå­—èŠ‚ï¼‰
 
 A  R  G  B
 00 00 00 00   
    aa 00 00  R  AA << 16 =
       bb 00  G  BB << 8
 	 cc  B  CC << 0
-Ïà»ò
+ç›¸æˆ–
 aa bb cc
-£¨unsigned int£©
+ï¼ˆunsigned intï¼‰
 	
 
 

@@ -4,44 +4,44 @@
 
 int open(const char *pathname, int flags);
 
-pathname£ºÒª´ò¿ªµÄÎÄ¼þµÄÂ·¾¶¡£
-flags£º O_RDONLY, O_WRONLY, or O_RDWR.
-·µ»ØÖµ£º³É¹¦·µ»ØÎÄ¼þÃèÊö·û£¬Ê§°Ü·µ»Ø-1
+pathnameï¼šè¦æ‰“å¼€çš„æ–‡ä»¶çš„è·¯å¾„ã€‚
+flagsï¼š O_RDONLY, O_WRONLY, or O_RDWR.
+è¿”å›žå€¼ï¼šæˆåŠŸè¿”å›žæ–‡ä»¶æè¿°ç¬¦ï¼Œå¤±è´¥è¿”å›ž-1
 
 
-write£º
+writeï¼š
 
 #include <unistd.h>
 ssize_t write(int fd, const void *buf, size_t count);
-fd:ÎÄ¼þÃèÊö·û£¬openÖ®ºóµÃµ½µÄ
-buf:Ð´ÈëµÄÄÚÈÝÀ´Ô´¡£Ö¸Õë¡£
-count£ºÐ´Èë¶à´óµÄÊý¾Ý¡££¨×Ö½Ú£©
+fd:æ–‡ä»¶æè¿°ç¬¦ï¼Œopenä¹‹åŽå¾—åˆ°çš„
+buf:å†™å…¥çš„å†…å®¹æ¥æºã€‚æŒ‡é’ˆã€‚
+countï¼šå†™å…¥å¤šå¤§çš„æ•°æ®ã€‚ï¼ˆå­—èŠ‚ï¼‰
 
 
 
 
 
-> 5ÖÖÑÕÉ«£¨·ÇR,G,B£©Ã¿¸ôÒ»ÃëÑ­»·ÇÐ»»
-> ÌáÊ¾£ºÑÓÊ±º¯Êý£ºsleep()£¬º¯Êý²é¿´£ºman
+> 5ç§é¢œè‰²ï¼ˆéžR,G,Bï¼‰æ¯éš”ä¸€ç§’å¾ªçŽ¯åˆ‡æ¢
+> æç¤ºï¼šå»¶æ—¶å‡½æ•°ï¼šsleep()ï¼Œå‡½æ•°æŸ¥çœ‹ï¼šman
 
 
 #include <sys/mman.h>
 
 void *mmap(void *addr, size_t length, int prot, int flags,int fd, off_t offset);
 
-addr:NULL,ÄÚºË×Ô¶¯·ÖÅäÒ»¶ÎÄÚ´æ
-length:³¤¶È
+addr:NULL,å†…æ ¸è‡ªåŠ¨åˆ†é…ä¸€æ®µå†…å­˜
+length:é•¿åº¦
 prot:  PROT_EXEC
        PROT_READ  
        PROT_WRITE  
 	PROT_NONE 
-flags: MAP_SHARED£¬MAP_PRIVATE¡£
-fd£ºÎÄ¼þÃèÊö·û
-offset£ºÆ«ÒÆÁ¿
+flags: MAP_SHAREDï¼ŒMAP_PRIVATEã€‚
+fdï¼šæ–‡ä»¶æè¿°ç¬¦
+offsetï¼šåç§»é‡
 
-·µ»ØÖµ£º ³É¹¦·µ»ØµØÖ·£¬Ê§°Ü·µ»Ø(void *)-1
+è¿”å›žå€¼ï¼š æˆåŠŸè¿”å›žåœ°å€ï¼Œå¤±è´¥è¿”å›ž(void *)-1
 
-Á·Ï°£º
+ç»ƒä¹ ï¼š
 1. 
        usleep()
 
