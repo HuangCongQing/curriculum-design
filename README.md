@@ -61,3 +61,7 @@ motor_completed
 
 
 ![](https://upload-images.jianshu.io/upload_images/4340772-39e1b0991dafb853.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### LICENSE
+
+本项目全部内容遵守 MIT 许可协议.
