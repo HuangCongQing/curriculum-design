@@ -2,6 +2,8 @@
 课程设计，课程代码
 
 2017.12
+> 本项目由[@重庆](https://github.com/HuangCongQing/curriculum-design)学习整理
+
 ### 学习过程
 
 * [第1次test](./cqupt3/03_day_2)
@@ -16,9 +18,11 @@
 
 ### 思路分析过程
 
-首先ARM开发板通过串口发送数据字符串“11”“10”到协调器，协调器自动发送数据到节点，节点通过函数处理将字符串转化为数组，通过数组内容判断，来决定电机正转或者是反转。
-
 ![原理过程](https://upload-images.jianshu.io/upload_images/4340772-47c6685733e8c2a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+#### 流程图
+
+首先ARM开发板通过串口发送数据字符串“11”“10”到协调器，协调器自动发送数据到节点，节点通过函数处理将字符串转化为数组，通过数组内容判断，来决定电机正转或者是反转。
 
 ![数据流程图](https://upload-images.jianshu.io/upload_images/4340772-83a0284e2f85c27d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
